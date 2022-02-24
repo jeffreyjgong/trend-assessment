@@ -15,9 +15,9 @@ function App() {
   const [data, setData] = useState(startList);
   const columns = [
     { title: "Name", field: "name" },
-    { title: "Last Transaction", field: "transaction" },
-    { title: "Net Promoter Score", field: 'score' },
-    { title: "Contact", field: 'phone', }
+    { title: "Last Transaction", field: "lastTransaction" },
+    { title: "Net Promoter Score", field: 'netPromoterScore' },
+    { title: "Contact", field: 'contact', }
   ]
 
   return (
@@ -31,6 +31,7 @@ function App() {
         editable={{
           onRowAdd: (newRow) => new Promise((resolve, reject) => {
             const updatedRows = [...data, newRow]
+            console.log(updatedRows)
             setTimeout(() => {
               setData(updatedRows)
               resolve()
