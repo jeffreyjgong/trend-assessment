@@ -39,7 +39,7 @@ function App() {
           
         }}
         options={{
-          actionsColumnIndex: -1, addRowPosition: "first"
+          actionsColumnIndex: -1, addRowPosition: "first", filtering: true
         }}
       />
     </div>
